@@ -81,8 +81,7 @@ def train_model(config: Config, epoch: int, train_insts: List[Instance], dev_ins
     res_folder = "results"
     if os.path.exists("model_files/" + model_folder):
         raise FileExistsError(
-            f"The folder model_files/{model_folder} exists. Please either delete it or create a new one "
-            f"to avoid override.")
+            f"The folder model_files/{model_folder} exists. Please either delete it or create a new one ")
     model_path = f"model_files/{model_folder}/lstm_crf.m"
     config_path = f"model_files/{model_folder}/config.conf"
     res_path = f"{res_folder}/{model_folder}.results"
